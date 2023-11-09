@@ -11,6 +11,7 @@ function Search({onSearchChange}) {
     const loadOptions = (inputValue)=>{
         return  fetch(`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`, Geo_API_options)
         .then((Response)=>Response.json())
+       
         .then((Response)=>{return {
             options:Response.data.map((city)=>{
                 return {
@@ -20,8 +21,9 @@ function Search({onSearchChange}) {
             })
         }})
         .catch((err)=>{console.log(err);})
-  
+
     }
+   
   return (
     <AsyncPaginate
      placeholder="search for city"

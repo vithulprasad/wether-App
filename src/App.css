@@ -1,4 +1,8 @@
+
+body{
+  background-color: azure;
+}
 .App{
-  max-width: 1086;
-  background: #f59191;
+  max-width: 1086px;
+  margin: 20px auto;
 }
